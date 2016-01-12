@@ -8,7 +8,7 @@ import (
 var PlanMedia = MediaType("application/cfbroker.plan+json", func() {
 	Description("Service Plan")
 	Attributes(func() {
-		Attribute("id", Integer, "An identifier used to correlate this plan in future requests to the catalog.")
+		Attribute("id", String, "An identifier used to correlate this plan in future requests to the catalog.")
 		Attribute("name", String, "CLI-friendly name of the plan that will appear in the catalog")
 		Attribute("description", String, "Short description of the plan that will appear in the catalog")
 		Attribute("metadata", HashOf(String, String), "A list of metadata for a service offering")

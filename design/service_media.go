@@ -8,7 +8,7 @@ import (
 var ServiceMedia = MediaType("application/cfbroker.service+json", func() {
 	Description("Service")
 	Attributes(func() {
-		Attribute("id", Integer, "An identifier used to correlate this service in future requests to the catalog")
+		Attribute("id", String, "An identifier used to correlate this service in future requests to the catalog")
 		Attribute("name", String, "CLI-friendly name of the service that will appear in the catalog")
 		Attribute("description", String, "Short description of the service that will appear in the catalog")
 		Attribute("bindable", Boolean, "Whether the service can be bound to applications")
