@@ -5,7 +5,7 @@ import (
 	. "github.com/raphael/goa/design/dsl"
 )
 
-var DashboardClientMedia = MediaType("application/cfbroker.dashboard+json", func() {
+var DashboardClientMedia = MediaType("application/cfbroker.dashboard-client+json", func() {
 	Description("Service Plan")
 	Attributes(func() {
 		Attribute("id", String, "The id of the Oauth2 client that the service intends to use.")
