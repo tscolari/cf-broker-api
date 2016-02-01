@@ -72,7 +72,6 @@ var _ = Resource("Provisioning", func() {
 		Response(OK)
 		Response(Accepted)
 		Response(Gone)
-		Response(NotFound)
 	})
 })
 
@@ -93,7 +92,9 @@ var _ = Resource("Binding", func() {
 		})
 		Response(Created)
 		Response(OK)
+		Response(NotFound)
 		Response(Conflict)
+		Response(InternalServerError)
 	})
 
 	Action("delete", func() {
@@ -108,5 +109,6 @@ var _ = Resource("Binding", func() {
 		})
 		Response(OK)
 		Response(Gone)
+		Response(InternalServerError)
 	})
 })
